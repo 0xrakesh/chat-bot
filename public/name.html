@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+    
+</head>
+<body>
+    <style>
+        body {
+            background: linear-gradient(90deg,#6a3093,#a044ff);
+            color: white;
+        }
+        .body-content {
+            background-color: rgba(255, 255, 255, 0.178);
+            margin: 13% 40% 10% 40%;
+            padding: 5% 2% 8% 2%;
+            border: 2px solid white;
+            border-radius: 10%;
+            display: block;
+            justify-content: center;
+        }
+
+        #userid {
+            width: 75%;
+        }
+
+        @media all and ( max-width : 640px ) 
+        {
+            .body-content {
+                
+                width: 60%;
+                margin-top: 50%;
+                margin-left: 20%;
+            }
+        }
+
+    </style>
+
+<div class="body-content">
+    <h2 style="text-align: center;">Chat Bot</h2>
+    <form action="name" method="post">
+        <p style="text-align: center;">Enter your name to chat with bot</p><br><br>
+        <input style="justify-content: center;" type="text" name="username" id="userid" autofocus>
+        <input type="submit" value="submit">
+    </form>
+</div>
+
+</body>
+</html>

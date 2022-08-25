@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+</head>
+<body>
+    <style>
+        body {
+            background: linear-gradient(90deg,#C33764,#1D2671);
+        }
+
+        .chatbot {
+            margin: 5% 30% 0% 30%;
+            padding: 2% 2% 2% 2%;
+            background-color: rgba(255, 255, 255, 0.13);
+            border-radius: 4%;
+            color: white;
+            position: absolute; 
+            border: 2px double white;
+            left: 0%;
+            right: 20%;
+        }
+        
+        .messages {
+            padding: 2% 5% 2% 1%;
+            background: linear-gradient(60deg,#ee0979,#ec7927);
+            position: relative;
+            border-radius: 5%;
+            text-indent: 3%;
+            text-align: end;
+            text-transform: capitalize;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .bot {
+            padding: 2% 1% 2% 1%;
+            background: linear-gradient(60deg,#4568DC,#B06AB3);
+            position: relative;
+            border-radius: 5%;
+            text-indent: 3%;
+            text-transform: capitalize;
+
+        }
+        
+        
+        #sender {
+            margin-top: 30%;
+        }
+        
+        #logout {
+            padding-top: 20%;
+            text-align: center;
+        }
+        
+        #msg {
+            width: 75%;
+        }
+        
+        #logout_btn {
+            /* width: 50%; */
+            background: linear-gradient(#A770EF,#CF8BF3,#FDB99B);
+            border: 0;
+            /* height: 30px; */
+
+        }
+
+        #profile {
+            left: 80%;
+            right: 0%;
+            position: absolute;
+            color: white;
+            margin-top: 3%;
+            border: 2px solid white;
+            padding: 2% 2% 2% 2%;
+            top: 0%;
+            bottom: 5%;
+            border-right: 0px;
+            background-color: rgba(255, 255, 255, 0.171);
+            border-radius: 15% 0 0% 15%;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #primg {
+            border-radius: 50%;
+            width: 240px;
+            height: 240px;
+            margin-top: 20%;
+            margin-left: 13%;
+
+        }
+
+        .hob {
+            text-align: center;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #dname {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        #socimg {
+            width: 24px;
+            height: 24px;
+            margin-left: 35%;
+            margin-right: 3%;
+        }
+
+        a:hover {
+            color: violet;
+        }
+
+        @media all and (max-width: 640px) 
+        {
+            #profile {
+                visibility: hidden;
+            }
+
+            .chatbot {
+                width: 80%;
+                margin-top: 50%;
+                margin-left: 35%;
+            }
+
+            body {
+                background: none;
+                background-color:rgb(27, 124, 204);
+            }
+        }
+
+        </style>
+    <div class="chatbot">
+        <h2 style="text-align: center;"> Chat with bot</h2>
+        <div>
+            <p class="messages"></p>
+            <p class="bot"></p>
+            
+            <p class="messages"></p>
+            <p class="bot"></p>
+            
+            <p class="messages"></p>
+            <p class="bot"></p>
+            
+            <p class="messages"></p>
+            <p class="bot"></p>
+        </div>
+        <form action="http://localhost/msg" id="sender" method="POST">
+            <input type="text" name="msg" id="msg" placeholder="Message" autofocus>
+            <input type="submit" value="submit">
+        </form>
+        <form action="/logout" id="logout" method="post">
+            <input type="submit" value="Logout" id="logout_btn">
+        </form>
+    </div>
+    <div id="profile">
+        <h2 style="text-align: center;" id="dname">Developer</h2>
+        <img src="profile.jpg" alt="Profile Image" id="primg">
+        <h1 style="text-align: center;" id="dname">Rakesh Kumar</h1>
+        <p class="hob">Web Developer</p>
+        <p class="hob">UI/UX Designer</p>
+        <p class="hob">Reverse Engineer</p>
+        <img src="twitter.png" id="socimg" alt=""><a href="http://twitter.com/0xcyberhackz">Twitter</a><br><br>
+        <img src="github.png" id="socimg" alt=""><a href="http://github.com/0xrakesh">Github</a>
+    </div>
+    <script src="./messages.js"></script>
+</body>
+</html>
