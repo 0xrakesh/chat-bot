@@ -7,3 +7,6 @@ A Simple chat bot build with node js.
 - Install the modules ( express, fs, cookie-parser..)
 - Then run this command.
 - `` node message.js ``
+
+# Demo
+<img src="images/demo.gif">
